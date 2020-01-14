@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * ScandiPWA_SampleData
+ *
+ * @category    Scandiweb
+ * @package     ScandiPWA_SampleData
+ * @author      Vadims Petrovs <info@scandiweb.com>
+ * @copyright   Copyright (c) 2020 Scandiweb, Ltd (https://scandiweb.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="ScandiPWA_SampleData" setup_version="0.0.1">
+        <sequence>
+            <module name="Magento_Catalog"/>
+        </sequence>
+    </module>
+</config>

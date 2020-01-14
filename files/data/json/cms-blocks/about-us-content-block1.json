@@ -1,0 +1,8 @@
+{
+  "default-about-content-block1": {
+    "identifier": "about-content-block1",
+    "title": "About Us Content 1",
+    "stores": "default",
+    "content": "cms-blocks/about-us/content-block1.html"
+  }
+}

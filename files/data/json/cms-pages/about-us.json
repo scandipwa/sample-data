@@ -1,0 +1,8 @@
+{
+  "default-no-route": {
+    "identifier": "no-route",
+    "title": "404 Not Found",
+    "stores": "default",
+    "content": "cms-pages/404.html"
+  }
+}

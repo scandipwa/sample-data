@@ -1,1 +1,2 @@
-# sample-data
+ScandiPWA_SampleData
+===
