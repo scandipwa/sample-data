@@ -11,6 +11,8 @@
 
 namespace ScandiPWA\SampleData\Setup;
 
+use ScandiPWA\SampleData\Setup\Categories\CreateCategories;
+use ScandiPWA\SampleData\Setup\Products\CreateProducts;
 use ScandiPWA\SampleData\Setup\CMS\Page\AddAboutUsPage;
 use ScandiPWA\SampleData\Setup\AbstractUpgradeData;
 
@@ -18,6 +20,7 @@ class UpgradeData extends AbstractUpgradeData
 {
     protected $migrations = [
         '0.0.1' => AddAboutUsPage::class,
-        '0.0.2' => AddAboutUsPage::class
+        '0.0.3' => CreateCategories::class,
+        '0.0.4' => CreateProducts::class
     ];
 }

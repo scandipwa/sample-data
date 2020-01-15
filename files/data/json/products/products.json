@@ -1,0 +1,84 @@
+{
+  "0": {
+    "name": "Blue Slim Fit Jeans – Cliff",
+    "sku": "n31253498",
+    "attribute_set_id": 4,
+    "status": 1,
+    "visibility": 4,
+    "tax_class": 2,
+    "type_id": "simple",
+    "price": 80,
+    "qty": 100,
+    "images": {
+      "0": "1w1w1w1w_3.jpg",
+      "1": "4r4r5t5t_3.jpg"
+    },
+    "categories": {
+      "0": "men"
+    },
+    "website_ids": {
+      "0": 1
+    }
+  },
+  "1": {
+    "name": "Adidas Originals PW Tennis Hu-red-EU 40",
+    "sku": "n31141265-red-EU-40",
+    "attribute_set_id": 4,
+    "status": 1,
+    "visibility": 1,
+    "tax_class": 2,
+    "type_id": "simple",
+    "price": 59.99,
+    "qty": 100,
+    "images": {
+      "0": "2232e33e3e_2_1.jpg",
+      "1": "3343rr44_2_1.jpg"
+    },
+    "categories": {
+      "0": "men"
+    },
+    "website_ids": {
+      "0": 1
+    }
+  },
+  "2": {
+    "name": "Adidas Originals PW Tennis Hu-red-EU 41",
+    "sku": "n31141265-red-EU-41",
+    "attribute_set_id": 4,
+    "status": 1,
+    "visibility": 1,
+    "tax_class": 2,
+    "type_id": "simple",
+    "price": 59.99,
+    "qty": 100,
+    "images": {
+      "0": "2232e33e3e_2_1.jpg",
+      "1": "3343rr44_2_1.jpg"
+    },
+    "categories": {
+      "0": "men"
+    },
+    "website_ids": {
+      "0": 1
+    }
+  },
+  "3": {
+    "name": "Adidas Originals PW Tennis Hu",
+    "sku": "n31141265",
+    "attribute_set_id": 4,
+    "status": 1,
+    "visibility": 4,
+    "tax_class": 2,
+    "type_id": "configurable",
+    "images": {
+      "0": "2232e33e3e_2_1.jpg",
+      "1": "3343rr44_2_1.jpg"
+    },
+    "categories": {
+      "0": "men"
+    },
+    "website_ids": {
+      "0": 1
+    }
+  }
+}
