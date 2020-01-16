@@ -1,0 +1,58 @@
+{
+  "color": {
+    "frontend_label": "Color",
+    "frontend_input": "swatch_visual",
+    "values" : {
+      "brown" : {
+        "default_store_view" : "Brown",
+        "swatch": "#795548"
+      },
+      "white" : {
+        "default_store_view" : "White",
+        "swatch": "#ffffff"
+      },
+      "black" : {
+        "default_store_view" : "Black",
+        "swatch": "#1b1b1b"
+      },
+      "grey" : {
+        "default_store_view" : "Grey",
+        "swatch": "#b1adad"
+      },
+      "blue" : {
+        "default_store_view" : "Blue",
+        "swatch": "#3f51b5"
+      },
+      "red" : {
+        "default_store_view" : "Red",
+        "swatch": "#f44236"
+      }
+    }
+  },
+  "size": {
+    "frontend_label": "Size",
+    "frontend_input": "swatch_text",
+    "values" : {
+      "xs" : {
+        "default_store_view" : "Extra small size",
+        "swatch": "XS"
+      },
+      "s" : {
+        "default_store_view" : "Small size",
+        "swatch": "S"
+      },
+      "m" : {
+        "default_store_view" : "Medium size",
+        "swatch": "M"
+      },
+      "l" : {
+        "default_store_view" : "Large size",
+        "swatch": "L"
+      },
+      "xl" : {
+        "default_store_view" : "Extra large size",
+        "swatch": "XL"
+      }
+    }
+  }
+}

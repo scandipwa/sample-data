@@ -68,12 +68,33 @@ class CreateProducts
             }
 
             $product = $this->productFactory->create();
+            $colorAttribute = $product->getResource()->getAttribute('color');
+            $sizeAttribute = $product->getResource()->getAttribute('size');
+
+            if (isset($data['color'])) {
+                $colorOptionValue = $colorAttribute->getSource()->getOptionId($data['color']);
+                $product->setData('color', $colorOptionValue);
+            }
+
+            if (isset($data['size'])) {
+                $sizeOptionValue = $sizeAttribute->getSource()->getOptionId($data['size']);
+                $product->setData('size', $sizeOptionValue);
+            }
 
             if ($data['type_id'] === 'configurable') {
-                $colorAttributeId = $product->getResource()->getAttribute('color')->getId();
-
-                var_dump($colorAttributeId); die;
+                $colorAttributeId = $colorAttribute->getId();
+                $sizeAttributeId = $sizeAttribute->getId();
+                $attributes = [$colorAttributeId, $sizeAttributeId];
+                $associatedProductIds = [2,4,5,6]; //Product Ids Of Associated Products
+                foreach ($attributes as $attributeId) {
+                    $data = array('attribute_id' => $attributeId, 'product_id' => $productId, 'position' => $position);
+                    $position++;
+                    $attributeModel->setData($data)->save();
+                }
             }
+
+             //name in Default Store View
+
 
             $product->setSku($data['sku']);
             $product->setName($data['name']);
