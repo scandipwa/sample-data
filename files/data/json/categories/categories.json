@@ -1,8 +1,12 @@
 {
   "men": {
-    "name": "Men"
+    "name": "Men",
+    "description": "Special prices autumn winter 2019.",
+    "image": "mens.jpg"
   },
   "women": {
-    "name": "Women"
+    "name": "Women",
+    "description": "Discover seasonal pieces in a range of styles and fits, updated weekly.",
+    "image": "womens.jpg"
   }
 }

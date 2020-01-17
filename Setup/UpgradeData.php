@@ -21,8 +21,9 @@ class UpgradeData extends AbstractUpgradeData
 {
     protected $migrations = [
         '0.0.1' => AddAboutUsPage::class,
+       // '0.0.2' => AddCmsBlocks::class,
         '0.0.3' => CreateCategories::class,
         '0.0.4' => CreateProductAttributes::class,
-      //  '0.0.5' => CreateProducts::class
+        '0.0.5' => CreateProducts::class
     ];
 }

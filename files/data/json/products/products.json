@@ -6,7 +6,7 @@
     "status": 1,
     "visibility": 4,
     "tax_class": 2,
-    "short-description": "Slim fit five-pocket jeans with a washed effect. Zip fly and metal top button fastening in the front.",
+    "short_description": "Slim fit five-pocket jeans with a washed effect. Zip fly and metal top button fastening in the front.",
     "description": "product-descriptions/blue-slim-fit-jeans-cliff.html",
     "type_id": "simple",
     "price": 80,
@@ -29,19 +29,19 @@
     "status": 1,
     "visibility": 1,
     "tax_class": 2,
-    "short-description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
+    "short_description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
     "description": "product-descriptions/dress-trousers.html",
     "type_id": "simple",
     "price": 99.95,
     "qty": 100,
     "color": "Black",
-    "size": "S",
+    "size": "Small size",
     "images": {
       "0": "b1_35.jpg",
       "1": "b4_21.jpg"
     },
     "categories": {
-      "0": "men"
+      "0": "women"
     },
     "website_ids": {
       "0": 1
@@ -54,19 +54,19 @@
     "status": 1,
     "visibility": 1,
     "tax_class": 2,
-    "short-description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
+    "short_description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
     "description": "product-descriptions/dress-trousers.html",
     "type_id": "simple",
     "price": 99.95,
     "qty": 100,
     "color": "Black",
-    "size": "M",
+    "size": "Medium size",
     "images": {
       "0": "b1_35.jpg",
       "1": "b4_21.jpg"
     },
     "categories": {
-      "0": "men"
+      "0": "women"
     },
     "website_ids": {
       "0": 1
@@ -79,19 +79,19 @@
     "status": 1,
     "visibility": 1,
     "tax_class": 2,
-    "short-description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
+    "short_description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
     "description": "product-descriptions/dress-trousers.html",
     "type_id": "simple",
     "price": 99.95,
     "qty": 100,
     "color": "Black",
-    "size": "L",
+    "size": "Large size",
     "images": {
       "0": "b1_35.jpg",
       "1": "b4_21.jpg"
     },
     "categories": {
-      "0": "men"
+      "0": "women"
     },
     "website_ids": {
       "0": 1
@@ -104,18 +104,53 @@
     "status": 1,
     "visibility": 4,
     "tax_class": 2,
-    "short-description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
+    "short_description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
     "description": "product-descriptions/dress-trousers.html",
     "type_id": "configurable",
+    "price": 99.95,
+    "qty": 100,
     "images": {
-      "0": "2232e33e3e_2_1.jpg",
-      "1": "3343rr44_2_1.jpg"
+      "0": "b1_35.jpg",
+      "1": "b4_21.jpg"
     },
     "categories": {
-      "0": "men"
+      "0": "women"
     },
     "website_ids": {
       "0": 1
+    },
+    "associated_products": {
+      "0": "31331004-black-Small size",
+      "1": "31331004-black-Medium size",
+      "2": "31331004-black-Large size"
+    }
+  },
+  "5": {
+    "name": "Dress Trousers Grouped",
+    "sku": "31331005",
+    "attribute_set_id": 4,
+    "status": 1,
+    "visibility": 4,
+    "tax_class": 2,
+    "short_description": "Ankle-length trousers by Atelier Gardeur. Design DINA 2 Slim.",
+    "description": "product-descriptions/dress-trousers.html",
+    "type_id": "grouped",
+    "price": 99.95,
+    "qty": 100,
+    "images": {
+      "0": "b1_35.jpg",
+      "1": "b4_21.jpg"
+    },
+    "categories": {
+      "0": "women"
+    },
+    "website_ids": {
+      "0": 1
+    },
+    "associated_products": {
+      "0": "31331004-black-Small size",
+      "1": "31331004-black-Medium size",
+      "2": "31331004-black-Large size"
     }
   }
 }

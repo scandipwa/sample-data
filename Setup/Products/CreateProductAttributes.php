@@ -13,12 +13,13 @@ namespace ScandiPWA\SampleData\Setup\Products;
 
 use Magento\Framework\Setup\SetupInterface;
 use ScandiPWA\SampleData\Helper\FileParser;
-use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Catalog\Model\Product\Type;
 use Magento\Catalog\Model\ResourceModel\Eav\Attribute;
 use Magento\Eav\Model\Config;
 use Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\CollectionFactory as EavOptionCollectionFactory;
+use Magento\Catalog\Model\Config as CatalogConfig;
+use Magento\Eav\Api\AttributeManagementInterface;
 
 class CreateProductAttributes
 {
@@ -50,22 +51,38 @@ class CreateProductAttributes
     private $attrOptionCollectionFactory;
 
     /**
+     * @var CatalogConfig
+     */
+    private $catalogConfig;
+
+    /**
+     * @var AttributeManagementInterface
+     */
+    private $attributeManagement;
+
+    /**
      * @param FileParser $fileParser
      * @param EavSetupFactory $eavSetupFactory
      * @param Config $eavConfig
      * @param EavOptionCollectionFactory $attrOptionCollectionFactory
+     * @param CatalogConfig $catalogConfig
+     * @param AttributeManagementInterface $attributeManagement
      */
     public function __construct(
         FileParser $fileParser,
         EavSetupFactory $eavSetupFactory,
         Config $eavConfig,
-        EavOptionCollectionFactory $attrOptionCollectionFactory
+        EavOptionCollectionFactory $attrOptionCollectionFactory,
+        CatalogConfig $catalogConfig,
+        AttributeManagementInterface $attributeManagement
 
     ){
         $this->fileParser = $fileParser;
         $this->eavSetupFactory = $eavSetupFactory;
         $this->eavConfig = $eavConfig;
         $this->attrOptionCollectionFactory = $attrOptionCollectionFactory;
+        $this->catalogConfig = $catalogConfig;
+        $this->attributeManagement = $attributeManagement;
     }
 
     /**
@@ -147,6 +164,15 @@ class CreateProductAttributes
 
                 $attribute->addData($attributeData);
                 $attribute->save();
+                $groupId = $this->catalogConfig->getAttributeGroupId($data['attribute_set_id'], $data['attribute_group']);
+
+                $this->attributeManagement->assign(
+                    'catalog_product',
+                    $data['attribute_set_id'],
+                    $groupId,
+                    $attributeCode,
+                    999
+                );
             }
         }
     }
