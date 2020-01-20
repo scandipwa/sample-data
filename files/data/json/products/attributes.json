@@ -3,7 +3,7 @@
     "frontend_label": "Color",
     "frontend_input": "swatch_visual",
     "attribute_set_id": 4,
-    "attribute_group": "General",
+    "attribute_group": "Product Details",
     "values" : {
       "brown" : {
         "default_store_view" : "Brown",
@@ -35,7 +35,7 @@
     "frontend_label": "Size",
     "frontend_input": "swatch_text",
     "attribute_set_id": 4,
-    "attribute_group": "General",
+    "attribute_group": "Product Details",
     "values" : {
       "xs" : {
         "default_store_view" : "Extra small size",

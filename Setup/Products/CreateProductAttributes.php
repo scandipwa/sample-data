@@ -86,7 +86,9 @@ class CreateProductAttributes
     }
 
     /**
-     * @inheritDoc
+     * Applies migration.
+     *
+     * @param SetupInterface $setup
      */
     public function apply(SetupInterface $setup = null)
     {

@@ -1,0 +1,14 @@
+{
+  "homepage-category-preview": {
+    "identifier": "homepage-category-preview",
+    "title": "Homepage Category Preview",
+    "stores": "default",
+    "content": "cms-blocks/homepage-category-preview.html"
+  },
+  "homage-jeans-preview": {
+    "identifier": "homage-jeans-preview",
+    "title": "Homepage Jeans Preview",
+    "stores": "default",
+    "content": "cms-blocks/homage-jeans-preview.html"
+  }
+}

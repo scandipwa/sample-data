@@ -13,23 +13,16 @@ namespace ScandiPWA\SampleData\Setup\CMS\Page;
 use ScandiPWA\SampleData\Helper\FileParser;
 use Magento\Framework\Setup\SetupInterface;
 use ScandiPWA\SampleData\Helper\Cms;
-use ScandiPWA\SampleData\Helper\MediaMigration;
 
-class AddAboutUsPage
+class AddHomePage
 {
-    const PATH = 'cms-pages/about-us.json';
+    const PATH = 'cms-pages/homepage.json';
     const PAGE_LAYOUT = '1column';
-    const MIGRATION_MODULE = 'ScandiPWA_SampleData';
 
     /**
      * @var FileParser
      */
     private $fileParser;
-
-    /**
-     * @var MediaMigration
-     */
-    protected $mediaMigration;
 
     /**
      * @var Cms
@@ -40,29 +33,26 @@ class AddAboutUsPage
      * AddAboutUsPage constructor.
      *
      * @param FileParser $fileParser
-     * @param MediaMigration $mediaMigration
      * @param Cms $cms
      */
     public function __construct(
         FileParser $fileParser,
-        MediaMigration $mediaMigration,
         Cms $cms
     )
     {
         $this->fileParser = $fileParser;
-        $this->mediaMigration = $mediaMigration;
         $this->cmsHelper = $cms;
     }
 
     /**
-     * @inheritDoc
+     * Applies migration.
+     *
+     * @param SetupInterface $setup
      */
     public function apply(SetupInterface $setup = null)
     {
-        $this->copyImages();
-
         foreach ($this->fileParser->getCMSBlockDataFromJson(self::PATH) as $data) {
-            $this->cmsHelper->createPage(
+            $this->cmsHelper->updatePage(
                 $data['identifier'],
                 $data['content'],
                 [
@@ -74,20 +64,5 @@ class AddAboutUsPage
         }
     }
 
-    /**
-     * Adds About us page images to wysiwyg folder
-     * @return void
-     */
-    private function copyImages()
-    {
-        $media = [
-            'cms/about-us/hero.png',
-            'cms/about-us/history.jpg',
-            'cms/about-us/quality-products.jpg',
-            'cms/about-us/customer-service.jpg',
-            'cms/about-us/vaper.png'
-        ];
 
-        $this->mediaMigration->copyMediaFiles($media, self::MIGRATION_MODULE, 'wysiwyg');
-    }
 }

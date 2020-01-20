@@ -13,7 +13,11 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="ScandiPWA_SampleData" setup_version="0.0.5">
         <sequence>
-            <module name="Magento_Catalog"/>
+            <module name="Magento_Cms" />
+            <module name="Magento_Store" />
+            <module name="Magento_Eav" />
+            <module name="Magento_Catalog" />
+            <module name="Magento_ConfigurableProduct" />
         </sequence>
     </module>
 </config>

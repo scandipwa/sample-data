@@ -14,15 +14,22 @@ namespace ScandiPWA\SampleData\Setup\CMS\Block;
 use ScandiPWA\SampleData\Helper\FileParser;
 use Magento\Framework\Setup\SetupInterface;
 use ScandiPWA\SampleData\Helper\Cms;
+use ScandiPWA\SampleData\Helper\MediaMigration;
 
-class AddBottomFooterLinks
+class AddHomepageBlocks
 {
-    const PATH = 'cms-blocks/footer/footer-links.json';
+    const PATH = 'cms-blocks/homepage-blocks.json';
+    const MIGRATION_MODULE = 'ScandiPWA_SampleData';
 
     /**
      * @var Cms
      */
     private $cmsHelper;
+
+    /**
+     * @var MediaMigration
+     */
+    protected $mediaMigration;
 
     /**
      * @var FileParser
@@ -31,23 +38,45 @@ class AddBottomFooterLinks
 
     /**
      * @param Cms $cmsHelper
+     * @param MediaMigration $mediaMigration
      * @param FileParser $fileParser
      */
     public function __construct(
         Cms $cmsHelper,
+        MediaMigration $mediaMigration,
         FileParser $fileParser
     ){
         $this->cmsHelper = $cmsHelper;
+        $this->mediaMigration = $mediaMigration;
         $this->fileParser = $fileParser;
     }
 
     /**
-     * @inheritDoc
+     * Applies migration.
+     *
+     * @param SetupInterface $setup
      */
     public function apply(SetupInterface $setup = null)
     {
+        $this->copyImages();
+
         foreach ($this->fileParser->getCMSBlockDataFromJson(self::PATH) as $data) {
-            $this->cmsHelper->createBlock($data['identifier'], $data['content'], $data);
+            $this->cmsHelper->updateBlock($data['identifier'], $data['content'], $data);
         }
+    }
+
+    /**
+     * Adds About us page images to wysiwyg folder
+     * @return void
+     */
+    private function copyImages()
+    {
+        $media = [
+            'two-woman-in-field.jpg',
+            'man-on-the-roof.jpg',
+            'sunglasses-in-hands.jpg'
+        ];
+
+        $this->mediaMigration->copyMediaFiles($media, self::MIGRATION_MODULE, 'wysiwyg/homepage');
     }
 }

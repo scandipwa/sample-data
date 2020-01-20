@@ -1,0 +1,8 @@
+{
+  "default-no-route": {
+    "identifier": "home",
+    "title": "Homepage",
+    "stores": "default",
+    "content": "cms-pages/homepage.html"
+  }
+}

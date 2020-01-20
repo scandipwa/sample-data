@@ -106,28 +106,7 @@ class Cms
      * @param string $content
      * @param array $data
      * @return Block
-     */
-    public function createBlock(string $identifier, string $content, array $data = []): Block
-    {
-        return $this->updateBlock($identifier, $content, $data);
-    }
-
-    /**
-     * @param string $identifier
-     * @param string $content
-     * @param array $data
-     * @return Page
-     */
-    public function createPage(string $identifier, string $content, array $data = []): Page
-    {
-        return $this->updatePage($identifier, $content, $data);
-    }
-
-    /**
-     * @param string $identifier
-     * @param string $content
-     * @param array $data
-     * @return Block
+     * @throws Exception
      */
     public function updateBlock(string $identifier, string $content, array $data = []): Block
     {
