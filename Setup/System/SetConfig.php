@@ -41,12 +41,7 @@ class SetConfig
     public function apply(SetupInterface $setup = null)
     {
         $configData = [
-            'design/theme/theme_id' => '4',
-//            'system/full_page_cache/caching_application' => '2',
-//            'system/full_page_cache/varnish/access_list' => '127.0.0.1, 172.0.0.0, app',
-//            'system/full_page_cache/varnish/backend_host' => 'nginx',
-//            'system/full_page_cache/varnish/backend_port' => '80',
-//            'system/full_page_cache/varnish/grace_period' => '300',
+            'design/theme/theme_id' => '4'
         ];
 
         foreach ($configData as $path => $value) {

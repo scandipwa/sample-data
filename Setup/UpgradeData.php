@@ -17,6 +17,7 @@ use ScandiPWA\SampleData\Setup\Products\CreateProducts;
 use ScandiPWA\SampleData\Setup\Products\CreateProductAttributes;
 use ScandiPWA\SampleData\Setup\CMS\Page\AddHomePage;
 use ScandiPWA\SampleData\Setup\CMS\Block\AddHomepageBlocks;
+use ScandiPWA\SampleData\Setup\System\CreateMenu;
 use ScandiPWA\SampleData\Setup\AbstractUpgradeData;
 
 class UpgradeData extends AbstractUpgradeData
@@ -27,6 +28,7 @@ class UpgradeData extends AbstractUpgradeData
         '0.0.3' => AddHomepageBlocks::class,
         '0.0.4' => CreateCategories::class,
         '0.0.5' => CreateProductAttributes::class,
-        '0.0.6' => CreateProducts::class
+        '0.0.6' => CreateProducts::class,
+        '0.0.7' => CreateMenu::class
     ];
 }

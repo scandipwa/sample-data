@@ -1,0 +1,41 @@
+{
+  "new-main-menu": {
+    "title": "New Main Menu",
+    "identifier": "new-main-menu",
+    "menu_is_active" :1,
+    "items": {
+      "categories": {
+        "title": "Categories",
+        "identifier": "categories",
+        "item_class": "MenuOverlay-ItemFigure_type_root",
+        "url_type": "2",
+        "parent_id": "0",
+        "open_type": "0",
+        "is_active": "1",
+        "position": "10"
+      },
+      "women": {
+        "title": "Women",
+        "identifier": "women",
+        "icon": "scandipwa_menuorganizer_item_icons/woman.png",
+        "url_type": "2",
+        "url_key": "women",
+        "parent_id": "1",
+        "open_type": "0",
+        "is_active": "1",
+        "position": "20"
+      },
+      "men": {
+        "title": "Men",
+        "identifier": "men",
+        "icon": "scandipwa_menuorganizer_item_icons/man.png",
+        "url_type": "2",
+        "url_key": "men",
+        "parent_id": "1",
+        "open_type": "0",
+        "is_active": "1",
+        "position": "30"
+      }
+    }
+  }
+}
