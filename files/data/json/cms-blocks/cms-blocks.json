@@ -10,5 +10,11 @@
     "title": "Homepage Jeans Preview",
     "stores": "default",
     "content": "cms-blocks/homage-jeans-preview.html"
+  },
+  "social-links": {
+    "identifier": "social-links",
+    "title": "Social links block",
+    "stores": "default",
+    "content": "cms-blocks/social-links.html"
   }
 }

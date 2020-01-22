@@ -1,0 +1,23 @@
+{
+  "home": {
+    "identifier": "home",
+    "title": "Homepage",
+    "content_heading": "",
+    "stores": "default",
+    "content": "cms-pages/homepage.html"
+  },
+  "about-us": {
+    "identifier": "about-us",
+    "title": "About Us",
+    "content_heading": "About Us",
+    "stores": "default",
+    "content": "cms-pages/about-us.html"
+  },
+  "terms-and-conditions": {
+    "identifier": "terms-and-conditions",
+    "title": "Terms & Conditions",
+    "content_heading": "Terms & Conditions",
+    "stores": "default",
+    "content": "cms-pages/terms-and-conditions.html"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "homepage-slider": {
+    "title": "homepage-slider",
+    "is_active": "1",
+    "show_menu": "0",
+    "show_navigation": "0",
+    "lazy_load": "0",
+    "animation_speed": "0",
+    "slide_speed": "0",
+    "slides_to_display": "0",
+    "slides_to_scroll": "0",
+    "slides_to_display_tablet": "0",
+    "slides_to_scroll_tablet": "0",
+    "slides_to_display_mobile": "0",
+    "slides_to_scroll_mobile": "0",
+    "slides": {
+      "summer-mood-dresses": {
+        "title": "summer-mood-dresses",
+        "is_active": "1",
+        "position": "0",
+        "image": "scandiweb/slider/s/l/slider-woman-on-the-beach.jpg",
+        "content": "sliders/homepage-slider.html",
+        "slide_text_position": "0",
+        "slide_width_class": "",
+        "slide_text_position_2": "0",
+        "slide_text_position_3": "0"
+      }
+    }
+  }
+}

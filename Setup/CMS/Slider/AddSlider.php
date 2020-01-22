@@ -69,32 +69,43 @@ class AddSlider
      */
     public function apply(SetupInterface $setup = null)
     {
+        $this->copyImages();
+
         foreach ($this->fileParser->getJSONContent(self::PATH) as $slider) {
 
             $newSlider = $this->sliderFactory
                 ->create()
-                ->load($slider['identifier'], 'identifier');
+                ->load($slider['title'], 'title');
 
-            if ($newSlider->getIdentifier()) {
+            if ($newSlider->getTitle()) {
                 continue;
             }
 
-            foreach ($slider['slides'] as $slideData) {
+            $newSlider->addData($slider)->save();
+            $sliderId = $newSlider->getSliderId();
 
+            foreach ($slider['slides'] as $slideData) {
                 $this->slideFactory->create()
                     ->addData($slideData)
+                    ->setSliderId($sliderId)
+                    ->setStores([0])
+                    ->setSlideText($this->fileParser->getHtmlContent($slideData['content']))
                     ->save();
 
-                $this->mediaMigration->copyMediaFiles(
-                    [
-                        $slideData['image']
-                    ],
-                    self::MIGRATION_MODULE
-                );
-                $this->addSlide($slideData);
             }
         }
-
     }
 
+    /**
+     * Adds About us page images to wysiwyg folder
+     * @return void
+     */
+    private function copyImages()
+    {
+        $media = [
+            'slider-woman-on-the-beach.jpg'
+        ];
+
+        $this->mediaMigration->copyMediaFiles($media, self::MIGRATION_MODULE, 'scandiweb/slider/s/l');
+    }
 }

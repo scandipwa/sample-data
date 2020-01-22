@@ -14,9 +14,9 @@ use ScandiPWA\SampleData\Helper\FileParser;
 use Magento\Framework\Setup\SetupInterface;
 use ScandiPWA\SampleData\Helper\Cms;
 
-class AddHomePage
+class AddCmsPages
 {
-    const PATH = 'cms-pages/homepage.json';
+    const PATH = 'cms-pages/cms-pages.json';
     const PAGE_LAYOUT = '1column';
 
     /**
@@ -58,6 +58,7 @@ class AddHomePage
                 [
                     'stores' => [$data['stores']],
                     'title' => $data['title'],
+                    'content_heading' => $data['content_heading'],
                     'page_layout' => self::PAGE_LAYOUT
                 ]
             );

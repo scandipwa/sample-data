@@ -16,9 +16,9 @@ use Magento\Framework\Setup\SetupInterface;
 use ScandiPWA\SampleData\Helper\Cms;
 use ScandiPWA\SampleData\Helper\MediaMigration;
 
-class AddHomepageBlocks
+class AddCmsBlocks
 {
-    const PATH = 'cms-blocks/homepage-blocks.json';
+    const PATH = 'cms-blocks/cms-blocks.json';
     const MIGRATION_MODULE = 'ScandiPWA_SampleData';
 
     /**
@@ -71,12 +71,26 @@ class AddHomepageBlocks
      */
     private function copyImages()
     {
-        $media = [
+        $homepageMedia = [
             'two-woman-in-field.jpg',
             'man-on-the-roof.jpg',
             'sunglasses-in-hands.jpg'
         ];
 
-        $this->mediaMigration->copyMediaFiles($media, self::MIGRATION_MODULE, 'wysiwyg/homepage');
+        $this->mediaMigration->copyMediaFiles($homepageMedia, self::MIGRATION_MODULE, 'wysiwyg/homepage');
+
+        $socialLinksMedia = [
+            'instagram.svg',
+            'facebook.svg',
+            'twitter.svg'
+        ];
+
+        $this->mediaMigration->copyMediaFiles($socialLinksMedia, self::MIGRATION_MODULE, 'wysiwyg/social');
+
+        $logo = [
+            'logo.png'
+        ];
+
+        $this->mediaMigration->copyMediaFiles($logo, self::MIGRATION_MODULE, 'logo/default');
     }
 }

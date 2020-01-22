@@ -16,6 +16,8 @@ use Magento\Framework\Filesystem;
 use Magento\Framework\File\Csv as CsvProcessor;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\Exception\FileSystemException;
+use Magento\Framework\Component\ComponentRegistrar;
+use Magento\Framework\Component\ComponentRegistrarInterface;
 
 class FileParser
 {
@@ -23,6 +25,11 @@ class FileParser
      * Path to the data files from root magento folder
      */
     const PATH_TO_DATA = 'code/ScandiPWA/SampleData/files/data/';
+
+    /**
+     * Migration module name
+     */
+    const MIGRATION_MODULE = 'ScandiPWA_SampleData';
 
     /**
      * Content array key
@@ -55,23 +62,36 @@ class FileParser
     private $storeManager;
 
     /**
+     * @var string
+     */
+    private $sourcePath;
+
+    /**
+     * @var String
+     */
+    private $pathToData;
+
+    /**
      * FileParser constructor.
      *
      * @param Filesystem $fileSystem
      * @param CsvProcessor $csvProcessor
      * @param DirectoryList $directoryList
      * @param StoreManagerInterface $storeManager
+     * @param ComponentRegistrarInterface $registrar
      */
     public function __construct(
         Filesystem $fileSystem,
         CsvProcessor $csvProcessor,
         DirectoryList $directoryList,
-        StoreManagerInterface $storeManager
+        StoreManagerInterface $storeManager,
+        ComponentRegistrarInterface $registrar
     ) {
         $this->rootDirectory = $fileSystem->getDirectoryRead(DirectoryList::APP);
         $this->csvProcessor = $csvProcessor;
         $this->directoryList = $directoryList;
         $this->storeManager = $storeManager;
+        $this->pathToData = $registrar->getPath(ComponentRegistrar::MODULE, self::MIGRATION_MODULE) . '/files/data/';
     }
 
     /**
@@ -87,7 +107,7 @@ class FileParser
         return $this->rootDirectory->readFile(
             sprintf(
                 '%shtml/%s',
-                static::PATH_TO_DATA,
+                $this->pathToData,
                 $filePath
             )
         );
@@ -106,7 +126,7 @@ class FileParser
         $data = $this->rootDirectory->readFile(
             sprintf(
                 '%sjson/%s',
-                static::PATH_TO_DATA,
+                $this->pathToData,
                 $filePath
             )
         );
@@ -128,7 +148,7 @@ class FileParser
             sprintf(
                 '%s/%scsv/%s',
                 $this->directoryList->getPath(DirectoryList::APP),
-                static::PATH_TO_DATA,
+                $this->pathToData,
                 $filePath
             )
         );
