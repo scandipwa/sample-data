@@ -11,9 +11,7 @@
 
 namespace ScandiPWA\SampleData\Helper;
 
-use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Filesystem;
-use Magento\Framework\File\Csv as CsvProcessor;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\Exception\FileSystemException;
 use Magento\Framework\Component\ComponentRegistrar;
@@ -21,11 +19,6 @@ use Magento\Framework\Component\ComponentRegistrarInterface;
 
 class FileParser
 {
-    /**
-     * Path to the data files from root magento folder
-     */
-    const PATH_TO_DATA = 'code/ScandiPWA/SampleData/files/data/';
-
     /**
      * Migration module name
      */
@@ -47,51 +40,25 @@ class FileParser
     protected $rootDirectory;
 
     /**
-     * @var CsvProcessor
-     */
-    protected $csvProcessor;
-
-    /**
-     * @var DirectoryList
-     */
-    protected $directoryList;
-
-    /**
      * @var StoreManagerInterface
      */
     private $storeManager;
 
     /**
-     * @var string
-     */
-    private $sourcePath;
-
-    /**
-     * @var String
-     */
-    private $pathToData;
-
-    /**
      * FileParser constructor.
      *
      * @param Filesystem $fileSystem
-     * @param CsvProcessor $csvProcessor
-     * @param DirectoryList $directoryList
      * @param StoreManagerInterface $storeManager
      * @param ComponentRegistrarInterface $registrar
      */
     public function __construct(
         Filesystem $fileSystem,
-        CsvProcessor $csvProcessor,
-        DirectoryList $directoryList,
         StoreManagerInterface $storeManager,
         ComponentRegistrarInterface $registrar
     ) {
-        $this->rootDirectory = $fileSystem->getDirectoryRead(DirectoryList::APP);
-        $this->csvProcessor = $csvProcessor;
-        $this->directoryList = $directoryList;
         $this->storeManager = $storeManager;
-        $this->pathToData = $registrar->getPath(ComponentRegistrar::MODULE, self::MIGRATION_MODULE) . '/files/data/';
+        $pathToData = $registrar->getPath(ComponentRegistrar::MODULE, self::MIGRATION_MODULE) . '/files/data/';
+        $this->rootDirectory = $fileSystem->getDirectoryReadByPath($pathToData);
     }
 
     /**
@@ -106,8 +73,7 @@ class FileParser
     {
         return $this->rootDirectory->readFile(
             sprintf(
-                '%shtml/%s',
-                $this->pathToData,
+                'html/%s',
                 $filePath
             )
         );
@@ -125,35 +91,13 @@ class FileParser
     {
         $data = $this->rootDirectory->readFile(
             sprintf(
-                '%sjson/%s',
-                $this->pathToData,
+                'json/%s',
                 $filePath
             )
         );
 
         return json_decode($data, true);
     }
-
-    /**
-     * Get content of csv file
-     *
-     * @param $filePath
-     *
-     * @return array
-     * @throws \Exception
-     */
-    public function getCsvContent($filePath)
-    {
-        return $this->csvProcessor->getData(
-            sprintf(
-                '%s/%scsv/%s',
-                $this->directoryList->getPath(DirectoryList::APP),
-                $this->pathToData,
-                $filePath
-            )
-        );
-    }
-
     /**
      * Return CMS Block Data From Json
      *

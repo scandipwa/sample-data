@@ -1,23 +1,26 @@
 {
   "home": {
-    "identifier": "home",
+    "identifier": "homepage",
     "title": "Homepage",
     "content_heading": "",
     "stores": "default",
-    "content": "cms-pages/homepage.html"
+    "content": "cms-pages/homepage.html",
+    "page_width": "full"
   },
   "about-us": {
     "identifier": "about-us",
     "title": "About Us",
     "content_heading": "About Us",
     "stores": "default",
-    "content": "cms-pages/about-us.html"
+    "content": "cms-pages/about-us.html",
+    "page_width": "default"
   },
   "terms-and-conditions": {
     "identifier": "terms-and-conditions",
     "title": "Terms & Conditions",
     "content_heading": "Terms & Conditions",
     "stores": "default",
-    "content": "cms-pages/terms-and-conditions.html"
+    "content": "cms-pages/terms-and-conditions.html",
+    "page_width": "default"
   }
 }

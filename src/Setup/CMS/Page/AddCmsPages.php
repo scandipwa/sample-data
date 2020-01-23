@@ -59,6 +59,7 @@ class AddCmsPages
                     'stores' => [$data['stores']],
                     'title' => $data['title'],
                     'content_heading' => $data['content_heading'],
+                    'page_width' => $data['page_width'],
                     'page_layout' => self::PAGE_LAYOUT
                 ]
             );
