@@ -132,6 +132,7 @@ class CreateProductAttributes
                         'searchable' => true,
                         'filterable' => true,
                         'comparable' => true,
+                        'visible_on_front' => $data['is_visible_on_front'],
                         'visible_in_advanced_search' => true,
                         'apply_to' => implode(',', [Type::TYPE_SIMPLE, Type::TYPE_VIRTUAL]),
                         'is_used_in_grid' => true,

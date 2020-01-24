@@ -4,6 +4,7 @@
     "frontend_input": "swatch_visual",
     "attribute_set_id": 4,
     "attribute_group": "Product Details",
+    "is_visible_on_front": 1,
     "values" : {
       "brown" : {
         "default_store_view" : "Brown",
@@ -36,6 +37,7 @@
     "frontend_input": "swatch_text",
     "attribute_set_id": 4,
     "attribute_group": "Product Details",
+    "is_visible_on_front": 1,
     "values" : {
       "xs" : {
         "default_store_view" : "Extra small size",

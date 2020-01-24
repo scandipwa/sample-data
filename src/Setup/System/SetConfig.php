@@ -41,7 +41,8 @@ class SetConfig
     public function apply(SetupInterface $setup = null)
     {
         $configData = [
-            'design/theme/theme_id' => '4'
+            'design/theme/theme_id' => '4',
+            'design/header/logo_src' => 'default/logo.png'
         ];
 
         foreach ($configData as $path => $value) {
