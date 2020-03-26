@@ -126,6 +126,7 @@ class CreateProductAttributes
                     [
                         'type' => 'int',
                         'label' => $data['frontend_label'],
+                        'global' => $data['global'],
                         'input' => 'select',
                         'required' => false,
                         'user_defined' => true,

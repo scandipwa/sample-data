@@ -1,5 +1,6 @@
 {
   "color": {
+    "global": true,
     "frontend_label": "Color",
     "frontend_input": "swatch_visual",
     "attribute_set_id": 4,
@@ -33,6 +34,7 @@
     }
   },
   "size": {
+    "global": true,
     "frontend_label": "Size",
     "frontend_input": "swatch_text",
     "attribute_set_id": 4,
