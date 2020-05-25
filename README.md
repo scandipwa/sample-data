@@ -1,6 +1,8 @@
 ScandiPWA_SampleData
 ===
 
+> **Note**: This module is WIP!
+
 1.0.0 - 2020-01-22
 
      - Set minimal configuration necessary for PWA theme
