@@ -42,7 +42,8 @@ class SetConfig
     {
         $configData = [
             'design/theme/theme_id' => '4',
-            'design/header/logo_src' => 'default/logo.png'
+            'design/header/logo_src' => 'default/logo.png',
+            'web/seo/use_rewrites' => 1
         ];
 
         foreach ($configData as $path => $value) {
