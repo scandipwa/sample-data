@@ -16,5 +16,11 @@
     "title": "Social links block",
     "stores": "default",
     "content": "cms-blocks/social-links.html"
+  },
+  "contacts-header": {
+      "identifier": "contacts-header",
+      "title": "Contacts Block",
+      "stores": "default",
+      "content": "cms-blocks/contacts-header.html"
   }
 }
