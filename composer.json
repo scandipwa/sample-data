@@ -1,22 +1,22 @@
 {
-  "name": "scandipwa/sample-data",
-  "description": "Sample data for ScandiPWA",
-  "type": "magento2-module",
-  "require": {
-    "magento/magento2-base": "^2.3.2"
-  },
-  "autoload": {
-    "files": [
-      "src/registration.php"
-    ],
-    "psr-4": {
-      "ScandiPWA\\SampleData\\": "src/"
-    }
-  },
-  "support": {
-    "email": "info@scandiweb.com"
-  },
-  "licence": [
-    "OSL-3.0"
-  ]
+    "name": "scandipwa/sample-data",
+    "description": "Sample data for ScandiPWA",
+    "type": "magento2-module",
+    "require": {
+        "magento/magento2-base": "^2.3.2"
+    },
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "ScandiPWA\\SampleData\\": "src/"
+        }
+    },
+    "support": {
+        "email": "info@scandiweb.com"
+    },
+    "licence": [
+        "OSL-3.0"
+    ]
 }
