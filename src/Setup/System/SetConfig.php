@@ -41,9 +41,11 @@ class SetConfig
     public function apply(SetupInterface $setup = null)
     {
         $configData = [
-            'design/theme/theme_id' => '4',
+            'catalog/seo/category_canonical_tag' => 1,
+            'catalog/seo/product_canonical_tag' => 1,
             'design/header/logo_src' => 'default/logo.png',
-            'web/seo/use_rewrites' => 1
+            'design/theme/theme_id' => '4',
+            'web/seo/use_rewrites' => 1,
         ];
 
         foreach ($configData as $path => $value) {
