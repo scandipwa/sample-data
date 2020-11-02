@@ -16,5 +16,35 @@
     "title": "Social links block",
     "stores": "default",
     "content": "cms-blocks/social-links.html"
+  },
+  "footer-links": {
+    "identifier": "footer-links",
+    "title": "Footer links block",
+    "stores": "default",
+    "content": "cms-blocks/footer-links.html"
+  },
+  "cartoverlay-promo": {
+    "identifier": "cartoverlay-promo",
+    "title": "Cart overlay promotion block",
+    "stores": "default",
+    "content": "cms-blocks/cartoverlay-promo.html"
+  },
+  "cartpage-promo": {
+    "identifier": "cartpage-promo",
+    "title": "Cart Page promotion block",
+    "stores": "default",
+    "content": "cms-blocks/cartpage-promo.html"
+  },
+  "header-contacts-bellow": {
+    "identifier": "header-contacts-bellow",
+    "title": "Header contacts bellow menu",
+    "stores": "default",
+    "content": "cms-blocks/header-contacts-bellow.html"
+  },
+  "header-contacts-above": {
+    "identifier": "header-contacts-above",
+    "title": "Header contacts above menu",
+    "stores": "default",
+    "content": "cms-blocks/header-contacts-above.html"
   }
 }
