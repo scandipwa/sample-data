@@ -41,6 +41,8 @@ class SetConfig
     public function apply(SetupInterface $setup = null)
     {
         $configData = [
+            'catalog/seo/category_canonical_tag' => 1,
+            'catalog/seo/product_canonical_tag' => 1,
             'content_customization/cart_content/cart_cms' => 'cartpage-promo',
             'content_customization/footer_content/footer_cms' => 'footer-links',
             'content_customization/header_content/contacts_cms' => 'header-contacts-above',
