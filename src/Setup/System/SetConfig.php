@@ -43,6 +43,11 @@ class SetConfig
         $configData = [
             'catalog/seo/category_canonical_tag' => 1,
             'catalog/seo/product_canonical_tag' => 1,
+            'content_customization/cart_content/cart_cms' => 'cartpage-promo',
+            'content_customization/footer_content/footer_cms' => 'footer-links',
+            'content_customization/header_content/contacts_cms' => 'header-contacts-above',
+            'content_customization/header_content/header_cms' => 'header-contacts-bellow',
+            'content_customization/minicart_content/minicart_cms' => 'cartoverlay-promo',
             'design/header/logo_src' => 'default/logo.png',
             'design/theme/theme_id' => '4',
             'web/seo/use_rewrites' => 1
