@@ -5,7 +5,7 @@
     "content_heading": "",
     "stores": "default",
     "content": "cms-pages/homepage.html",
-    "page_width": "full"
+    "page_width": "default"
   },
   "about-us": {
     "identifier": "about-us",
