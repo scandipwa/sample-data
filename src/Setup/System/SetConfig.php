@@ -49,6 +49,8 @@ class SetConfig
             'content_customization/header_content/header_cms' => 'header-contacts-bellow',
             'content_customization/minicart_content/minicart_cms' => 'cartoverlay-promo',
             'design/header/logo_src' => 'default/logo.png',
+            'design/header/logo_width' => 140,
+            'design/header/logo_height' => 25,
             'design/theme/theme_id' => '4',
             'web/seo/use_rewrites' => 1
         ];

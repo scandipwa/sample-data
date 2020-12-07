@@ -82,7 +82,10 @@ class AddCmsBlocks
         $socialLinksMedia = [
             'instagram.svg',
             'facebook.svg',
-            'twitter.svg'
+            'twitter.svg',
+            'linkedin.png',
+            'twitter.png',
+            'youtube.png'
         ];
 
         $this->mediaMigration->copyMediaFiles($socialLinksMedia, self::MIGRATION_MODULE, 'wysiwyg/social');
