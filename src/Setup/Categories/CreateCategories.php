@@ -107,6 +107,7 @@ class CreateCategories
             $mediaAttribute =['image', 'small_image', 'thumbnail'];
             $categoryTmp->setImage($data['image'], $mediaAttribute, true, false);
             $categoryTmp->setPath($rootCategory->getPath());
+            $categoryTmp->setDisplayMode('PRODUCTS_AND_PAGE');
             $categoryTmp->save();
         }
     }
