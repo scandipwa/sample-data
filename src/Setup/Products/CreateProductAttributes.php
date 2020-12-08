@@ -138,6 +138,7 @@ class CreateProductAttributes
                         'apply_to' => implode(',', [Type::TYPE_SIMPLE, Type::TYPE_VIRTUAL]),
                         'is_used_in_grid' => true,
                         'is_visible_in_grid' => false,
+                        'used_in_product_listing' => $data['used_in_product_listing'] ?? false,
                         'option' => [
                             'values' => $optionValues
                         ]

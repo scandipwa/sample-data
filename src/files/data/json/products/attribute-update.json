@@ -1,0 +1,29 @@
+{
+    "status": {
+        "used_in_product_listing": 0
+    },
+    "name": {
+        "used_in_product_listing": 0
+    },
+    "price": {
+        "used_in_product_listing": 0
+    },
+    "tax_class_id": {
+        "used_in_product_listing": 0
+    },
+    "short_description": {
+        "used_in_product_listing": 0
+    },
+    "image": {
+        "used_in_product_listing": 0
+    },
+    "small_image": {
+        "used_in_product_listing": 0
+    },
+    "thumbnail": {
+        "used_in_product_listing": 0
+    },
+    "url_key": {
+        "used_in_product_listing": 0
+    }
+}
