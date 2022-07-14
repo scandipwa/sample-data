@@ -182,7 +182,7 @@ class Cms
         $this->appState->emulateAreaCode(
             self::AREA_CODE,
             [$this->blockResource, 'save'],
-            ['cms_block' => $cmsBlock]
+            [$cmsBlock]
         );
 
         return $cmsBlock;
@@ -197,7 +197,7 @@ class Cms
         $this->appState->emulateAreaCode(
             self::AREA_CODE,
             [$this->pageResource, 'save'],
-            ['cms_page' => $cmsPage]
+            [$cmsPage]
         );
 
         return $cmsPage;
