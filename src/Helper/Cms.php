@@ -179,10 +179,11 @@ class Cms
      */
     protected function saveBlock(Block $cmsBlock): Block
     {
+        $cms_block = [$cmsBlock];
         $this->appState->emulateAreaCode(
             self::AREA_CODE,
             [$this->blockResource, 'save'],
-            ['cms_block' => $cmsBlock]
+            $cms_block
         );
 
         return $cmsBlock;
@@ -194,10 +195,11 @@ class Cms
      */
     protected function savePage(Page $cmsPage): Page
     {
+        $cms_page = [$cmsPage];
         $this->appState->emulateAreaCode(
             self::AREA_CODE,
             [$this->pageResource, 'save'],
-            ['cms_page' => $cmsPage]
+            $cms_page
         );
 
         return $cmsPage;
